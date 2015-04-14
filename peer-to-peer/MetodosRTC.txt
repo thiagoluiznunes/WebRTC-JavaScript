@@ -1,0 +1,54 @@
+Métodos 
+
+getVideoTracks(), getAudioTracks():
+
+Os getVideoTracks () e getAudioTracks () métodos, definidos por
+o construtor MediaStream no Media Capture e Streams API,
+retornar uma sequência de objetos MediaStreamTrack representando, respectivamente,
+as faixas de vídeo e as faixas de áudio no stream.
+
+PeerConnection.onicecandidate(): 
+
+O manipulador onicecandidate é acionado sempre que um novo candidato
+é disponibilizada para o mesmo nível local pela máquina protocolo ICE dentro
+o navegador.
+
+addIceCandidate(): 
+
+O método addIceCandidate () fornece um candidato para o remoto
+ICE Agent. Para além de serem adicionadas à descrição remoto,
+verificações de conectividade será enviado para os novos candidatos, enquanto o
+Ice Transports restrição não está definido como "nenhum".
+
+onaddstream e onremovestream: 
+
+Os manipuladores onaddstream e onremovestream são chamados a qualquer momento
+um MediaStream é respectivamente adicionado ou removido pelo peer remoto.
+Ambos será desencadeado apenas como um resultado da execução do método setRemoteDescription().
+
+addStream() e removeStream(): 
+
+O addStream () e removeStream () métodos para adicionar um fluxo e
+remover um fluxo de um objeto RTCPeerConnection, respectivamente.
+
+createOffer(): 
+
+O método createOffer () gera uma bolha contendo uma SDP
+RFC 3264 oferta com as configurações suportadas para a sessão: o
+descrições dos fluxos de mídia locais anexado, o codec / RTP /
+Opções RTCP suportados pelo browser, e quaisquer candidatos que têm
+sido recolhida pelo Agente ICE. O parâmetro pode ser constrangimentos
+fornecido para fornecer controle adicional sobre a oferta gerada.
+
+setLocalDescription() e setRemoteDescription: 
+
+O setLocalDescription () e setRemoteDescription () métodos
+instruir o RTCPeerConnection para aplicar o RTCSessionDescription fornecido como a descrição local e 
+como a oferta remoto ou resposta, respectivamente.
+
+createAnswer() : 
+
+O método createAnswer () gera uma resposta com o SDP suportado
+configuração para a sessão que é compatível com os parâmetros
+na configuração remota.
+
