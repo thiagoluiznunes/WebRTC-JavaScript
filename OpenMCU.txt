@@ -1,0 +1,25 @@
+OpenMCU-ru tem as seguintes características:
+
+* configuração e controle através da interface web na porta 1420
+* suportados idiomas de interface: Inglês, russo, ucraniano, japonês
+* não requer hardware codec para operar
+* saída de vídeo é armazenada em cache para reduzir a carga sobre o servidor
+* protocolos suportados: H.323, SIP
+* codecs de vídeo suportados: H.261, H.263, H.263 +, H.264, VP8
+* suportados codecs de áudio: G.711, G.722, G723.1, G.726, G.729, iLBC, Speex, seda, OPUS
+* várias conferências diferentes podem estar ocorrendo ao mesmo tempo usando 'quartos' diferentes
+* exibir estatísticas de chamadas em tempo real
+* iniciar chamadas a partir do MCU para endpoints remotos
+* Gravação de conferência
+* tradução conferência como fluxo de web
+
+OpenMCU-ru escuta em H.323 e SIP portas para conexões de entrada.
+No servidor de conexão de entrada cria espaço, especificado pelo terminal remoto e conecta 
+o cliente para este quarto. Se o cliente não especificou qualquer sala, em seguida, o cliente 
+será conectado à sala de default («room101» por padrão, pode ser alterada em opções).
+Você pode ligar para o servidor usando o endereço de destino «room_name @ server-name_or_address». 
+Por exemplo, usando Myphone ou Linphone como um cliente, você pode chamar: «meeting1@mcu.myservers.com».
+Novos quartos são criados automaticamente quando eles são acessados. Além disso, há um quarto padrão para 
+clientes que não especificam quarto ou que são incapazes de especificá-lo (por exemplo, NetMeeting).
+Durante a conferência irá ouvir outros membros e vai vê-los na janela de vídeo. Você pode detecção ativação 
+configuração de voz (VAD), alterar o layout de tela e configurar outros parâmetros através da interface web.
